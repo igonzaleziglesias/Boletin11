@@ -8,15 +8,14 @@ public class Tiempo {
 
     private Date fechaIni;
     private Date fechaFin;
-    
+    private final String fraseCorrecta="A documentación e todo aquel conxunto de manuais impresos ou en formato dixital que explique unha aplicacion informatica";
     private String frase;
 
     public Tiempo() {
 
         do {
             fechaIni = new Date();
-            frase = JOptionPane.showInputDialog("ESCRIBE A SEGUINTE FRASE: \n"
-                + "   A documentación é todo aquel conxunto de manuais impresos ou en formato dixital que explique unha aplicación informática");
+            frase = JOptionPane.showInputDialog("ESCRIBE A SEGUINTE FRASE: \n"+fraseCorrecta);
 
             fechaFin = new Date();
 
@@ -29,6 +28,6 @@ public class Tiempo {
 
             JOptionPane.showMessageDialog(null, "TARDACHES " + formato.format(horas) + "-" + formato.format(minutos) + "-" + formato.format(segundos) + " TEMPO EN ESCRIBIR A FRASE");
 
-        } while (!"fin".equalsIgnoreCase(frase));
+        } while (!frase.equalsIgnoreCase(fraseCorrecta));
     }
 }
