@@ -15,7 +15,8 @@ public class Tiempo {
 
         do {
             fechaIni = new Date();
-            frase = JOptionPane.showInputDialog("ESCRIBE A SEGUINTE FRASE: ");
+            frase = JOptionPane.showInputDialog("ESCRIBE A SEGUINTE FRASE: \n"
+                + "   A documentación é todo aquel conxunto de manuais impresos ou en formato dixital que explique unha aplicación informática");
 
             fechaFin = new Date();
 
